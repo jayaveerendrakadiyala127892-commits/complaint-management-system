@@ -1,0 +1,180 @@
+:root {
+    /* Color Palette */
+    --main-page-bg: #322e38; /* Dark purplish-gray background */
+    --dark-bg: #1c1c24; /* Primary dark background for the form panel */
+    --purple: #6a1b9a;  /* Main purple accent */
+    --light-purple: #8e24aa; 
+    --white: #ffffff;
+    --text-light: #b0b0bb; /* Light gray text for labels/hints */
+    --text-dark: #333333; /* Dark text for inside white inputs */
+}
+
+/* 1. Body and Main Layout */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--main-page-bg); /* Applies the dark purplish-gray background */
+    color: var(--text-light);
+    overflow: hidden;
+}
+
+/* 2. Main Container (The Entire Box) */
+.register-container {
+    display: flex;
+    width: 900px; 
+    max-width: 90%; 
+    height: 600px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* 3. LEFT PANEL: Dark Register Form Side */
+.register-form-panel {
+    flex: 1; 
+    background-color: var(--dark-bg); /* Dark background */
+    padding: 30px 50px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
+
+.register-form-panel h2 {
+    color: var(--white);
+    font-size: 2.2em;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.register-form-panel .tagline {
+    color: var(--text-light);
+    font-size: 0.9em;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+/* Form Styles */
+.register-form-panel form {
+    width: 100%;
+    max-width: 300px;
+}
+
+.register-form-panel label {
+    font-size: 0.9em;
+    color: var(--text-light);
+    margin-top: 15px;
+    display: block;
+}
+
+/* Input Fields (White background, dark text) */
+.register-form-panel input[type="text"],
+.register-form-panel input[type="email"],
+.register-form-panel input[type="password"] {
+    width: 100%;
+    padding: 10px 15px;
+    margin-top: 5px;
+    background-color: var(--white); /* White input field background */
+    border: 1px solid #3a3a45;
+    border-radius: 6px;
+    color: var(--text-dark); /* Dark text inside input */
+    box-sizing: border-box;
+    margin-bottom: 5px;
+}
+
+/* Register Button (Primary button style) */
+.register-form-panel button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 25px;
+    background-color: var(--purple);
+    color: var(--white);
+    border: none;
+    border-radius: 6px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.register-form-panel button[type="submit"]:hover {
+    background-color: var(--light-purple);
+}
+
+/* Footer Links (Already have an account / Login Link) */
+.footer-links {
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 300px;
+}
+.footer-links p {
+    margin: 0;
+    font-size: 0.9em;
+    color: var(--text-light);
+}
+
+/* Styling the Login link (Sign Up style button) */
+.footer-links .login-link {
+    text-decoration: none;
+    background-color: var(--purple);
+    color: var(--white);
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+.footer-links .login-link:hover {
+    background-color: var(--light-purple);
+}
+
+/* Messages */
+.error {
+    color: #ff6b6b;
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+/* 4. RIGHT PANEL: Purple Welcome Side (Matching Login Page) */
+.welcome-panel {
+    flex: 1; 
+    background-color: var(--purple);
+    padding: 60px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: flex-start;
+    
+    /* Illustration Background Placeholder */
+    /* You may need to create a simple, clean placeholder image for this */
+    background-image: url('images/complaint_portal_illustration.png'); 
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    
+    color: var(--white);
+    text-align: left;
+}
+
+.welcome-panel h1 {
+    font-size: 3em;
+    line-height: 1.1;
+    margin-bottom: 10px;
+    font-weight: 700; 
+}
+
+.welcome-panel h1 .unbolded {
+    font-weight: 300; 
+    opacity: 0.9;
+}
+
+.welcome-panel p {
+    font-size: 1em;
+    font-weight: 400;
+    margin-top: 0;
+}

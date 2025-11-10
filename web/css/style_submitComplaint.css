@@ -1,0 +1,155 @@
+:root {
+    --main-page-bg: #322e38; 
+    --panel-bg: #1c1c24; 
+    --purple-accent: #6a1b9a;  
+    --purple-light: #8e24aa; 
+    --white: #ffffff;
+    --text-light: #b0bbbf; 
+    --text-accent: var(--white); 
+    --text-dark: #000000; 
+    --border-color: #3a3a45; 
+    --spacing-md: 15px;
+    --spacing-lg: 30px;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: var(--main-page-bg) !important;
+    color: var(--text-light); 
+}
+
+h2 {
+    color: var(--text-accent);
+    margin: 0;
+}
+
+/* Base styles for all links/buttons in the header */
+.header-nav a {
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+/* Secondary Button Style (My Complaints) */
+.nav-button.secondary-btn {
+    background-color: transparent;
+    color: var(--text-light); 
+    border: 1px solid var(--text-light);
+    margin-left: 10px;
+}
+.nav-button.secondary-btn:hover {
+    background-color: #3a3a45;
+    color: var(--text-accent);
+}
+
+/* Primary Button Style (Logout) */
+.nav-button.primary-btn {
+    background-color: var(--purple-accent);
+    color: var(--text-accent);
+    font-weight: 600;
+    margin-left: 10px;
+}
+.nav-button.primary-btn:hover {
+    background-color: var(--purple-light);
+}
+
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-md) var(--spacing-lg);
+    background-color: var(--panel-bg); 
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    box-sizing: border-box;
+    position: sticky; 
+    top: 0;
+    z-index: 100;
+}
+
+.header-nav strong {
+    color: var(--text-accent);
+}
+
+.page-wrapper {
+    padding: var(--spacing-lg); 
+    display: flex; 
+    justify-content: center; 
+    align-items: flex-start; 
+    min-height: calc(100vh - 70px); 
+}
+
+/* Complaint Box Size Increased */
+.info-card.form-card {
+    background-color: var(--panel-bg); 
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: var(--spacing-lg);
+    margin-top: var(--spacing-md);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 1000px; 
+}
+
+.form-tagline {
+    margin-top: 0;
+    margin-bottom: var(--spacing-lg);
+    font-size: 1.1em;
+    color: var(--text-accent);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+label {
+    color: var(--text-light); 
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    color: var(--text-dark); 
+    box-sizing: border-box;
+    resize: vertical; 
+}
+
+.submit-btn {
+    background-color: var(--purple-accent);
+    color: var(--text-accent);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: var(--spacing-md);
+}
+
+.submit-btn:hover {
+    background-color: var(--purple-light);
+}
+
+.error {
+    color: #ff6b6b; 
+    font-weight: 600;
+    margin-top: var(--spacing-md);
+}
+.success {
+    color: #69db7c; 
+    font-weight: 600;
+    margin-top: var(--spacing-md);
+}

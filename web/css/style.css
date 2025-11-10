@@ -1,0 +1,198 @@
+:root {
+    /* Color Palette */
+    --dark-bg: #1c1c24; /* Primary dark background */
+    --purple: #6a1b9a;  /* Main purple accent */
+    --light-purple: #8e24aa; /* Lighter button/hover purple */
+    --white: #ffffff;
+    --text-light: #b0b0bb; /* Light gray text for labels/hints */
+    --text-dark: #333333;
+}
+
+/* 1. Body and Main Layout (Full Screen Setup) */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--text-light);
+    overflow: hidden;
+}
+
+/* 2. The Main Login Container (The Entire Box) */
+.login-container {
+    display: flex;
+    width: 900px; 
+    max-width: 90%; 
+    height: 600px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative; 
+}
+
+/* 3. The Left Panel (Dark Login Side) */
+.login-form-panel {
+    flex: 1; 
+    background-color: var(--dark-bg);
+    padding: 60px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
+
+.login-form-panel h2 {
+    color: var(--white);
+    font-size: 2.2em;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.login-form-panel .tagline {
+    color: var(--text-light);
+    font-size: 0.9em;
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+/* Form Styles */
+.login-form-panel form {
+    width: 100%;
+    max-width: 300px;
+}
+
+.login-form-panel label {
+    font-size: 0.9em;
+    color: var(--text-light);
+    margin-top: 20px;
+    display: block;
+}
+
+.login-form-panel input[type="email"],
+.login-form-panel input[type="password"] {
+    width: 100%;
+    padding: 10px 15px;
+    margin-top: 5px;
+    background-color: #2a2a34; 
+    border: 1px solid #3a3a45;
+    border-radius: 6px;
+    color: var(--white);
+    box-sizing: border-box;
+}
+
+/* Forgot Password Link */
+.forgot-link {
+    width: 100%;
+    text-align: right;
+    margin: 10px 0 30px 0;
+    font-size: 0.9em;
+}
+.forgot-link a {
+    color: var(--text-light);
+    text-decoration: none;
+}
+
+/* Login Button */
+.login-form-panel button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--purple);
+    color: var(--white);
+    border: none;
+    border-radius: 6px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-form-panel button[type="submit"]:hover {
+    background-color: var(--light-purple);
+}
+
+/* Footer Links */
+.footer-links {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 300px;
+}
+.footer-links p {
+    margin: 0;
+    font-size: 0.9em;
+    color: var(--text-light);
+}
+
+.footer-links a {
+    text-decoration: none;
+    background-color: var(--purple);
+    color: var(--white);
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+.footer-links a:hover {
+    background-color: var(--light-purple);
+}
+
+
+/* 4. The Right Panel (Purple Welcome Side) */
+.welcome-panel {
+    flex: 1; 
+    background-color: var(--purple);
+    padding: 60px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: flex-start;
+    
+    /* Illustration Background Placeholder */
+    background-image: url('images/complaint_portal_illustration.png'); 
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    
+    color: var(--white);
+    text-align: left;
+}
+
+/* Welcome Text Styling */
+.welcome-panel h1 {
+    font-size: 3em;
+    line-height: 1.1;
+    margin-bottom: 10px;
+    /* This makes "Welcome to" BOLD */
+    font-weight: 700; 
+}
+
+/* This targets the span wrapped around "Complaint portal" and makes it light */
+.welcome-panel h1 .unbolded {
+    font-weight: 300; /* Lighter font weight */
+    opacity: 0.9;
+}
+
+.welcome-panel p {
+    font-size: 1em;
+    font-weight: 400;
+    margin-top: 0;
+}
+
+/* Utility and Messages */
+br {
+    display: none;
+}
+.error {
+    color: #ff6b6b;
+    font-weight: 600;
+    margin-top: 15px;
+}
+.success {
+    color: #69db7c;
+    font-weight: 600;
+    margin-top: 15px;
+}
